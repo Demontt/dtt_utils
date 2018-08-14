@@ -62,44 +62,44 @@ function w_icon(type){
     return type;
 }
 
-$.get('ajax.php',{
-    type: 'get',
-    target_url: 'http://wthrcdn.etouch.cn/weather_mini',
-    timestamp: 'now',
-    data: {
-		city:city
-	},
-    dataType: 'json',
-    success: function (resp) {
-		//console.log(resp);
-		var date_data=resp.data.forecast[0].date;
-		var data_len=date_data.substr(0,3);
-		var data_len_day=date_data.substr(3,3);
-		//console.log(data_len_day);
-		var date1=new Date();
-		var dateMon=date1.getMonth()+1;
-		var dateDay=date1.getDay();
-		$("#data span span").html(dateMon+'月'+data_len+" "+data_len_day);
-		$('#main tr:nth-of-type(1) td:nth-of-type(1)').html(resp.data.city);
-		$('#main tr:nth-of-type(1) td:nth-of-type(2)').html(w_icon(resp.data.forecast[0].type));
-		$('#main tr:nth-of-type(2) td:nth-of-type(1)').html(resp.data.wendu+"℃");
-		$('#main tr:nth-of-type(2) td:nth-of-type(2)').html(resp.data.forecast[0].fengxiang);
-	    $('#main tr:nth-of-type(3) td:nth-of-type(1)').html(resp.data.forecast[0].high);
-		$('#main tr:nth-of-type(3) td:nth-of-type(2)').html(resp.data.forecast[0].low);
-		$('#main tr:nth-of-type(4) td').html(resp.data.ganmao);
-		$('#forecast table tbody').empty();
-		for(var i=0;i<resp.data.forecast.length;i++){
-		var str = resp.data.forecast[i].fengli;
-		var str_fengli=str.substring(9, str.length - 3)
-			var forword_day="<tr class='success'><td>"+dateMon+'月'+resp.data.forecast[i].date+"</td><td>"+w_icon(resp.data.forecast[i].type)+"</td><td>"+resp.data.forecast[i].high+"</td><td>"+str_fengli+"</td><td>"+resp.data.forecast[i].low+"</td><td>"+resp.data.forecast[i].fengxiang+"</td></td>";
-			$('#forecast table tbody').append(forword_day);
-		}
-	},error:function (e) {
-        console.log(e);
-    }
-});
 $("#select_city").change( function() {
     city = $(this).val();
+    $.get('ajax.php',{
+        type: 'get',
+        target_url: 'http://wthrcdn.etouch.cn/weather_mini',
+        timestamp: 'now',
+        data: {
+            city:city
+        },
+        dataType: 'json',
+        success: function (resp) {
+            //console.log(resp);
+            var date_data=resp.data.forecast[0].date;
+            var data_len=date_data.substr(0,3);
+            var data_len_day=date_data.substr(3,3);
+            //console.log(data_len_day);
+            var date1=new Date();
+            var dateMon=date1.getMonth()+1;
+            var dateDay=date1.getDay();
+            $("#data span span").html(dateMon+'月'+data_len+" "+data_len_day);
+            $('#main tr:nth-of-type(1) td:nth-of-type(1)').html(resp.data.city);
+            $('#main tr:nth-of-type(1) td:nth-of-type(2)').html(w_icon(resp.data.forecast[0].type));
+            $('#main tr:nth-of-type(2) td:nth-of-type(1)').html(resp.data.wendu+"℃");
+            $('#main tr:nth-of-type(2) td:nth-of-type(2)').html(resp.data.forecast[0].fengxiang);
+            $('#main tr:nth-of-type(3) td:nth-of-type(1)').html(resp.data.forecast[0].high);
+            $('#main tr:nth-of-type(3) td:nth-of-type(2)').html(resp.data.forecast[0].low);
+            $('#main tr:nth-of-type(4) td').html(resp.data.ganmao);
+            $('#forecast table tbody').empty();
+            for(var i=0;i<resp.data.forecast.length;i++){
+            var str = resp.data.forecast[i].fengli;
+            var str_fengli=str.substring(9, str.length - 3)
+                var forword_day="<tr class='success'><td>"+dateMon+'月'+resp.data.forecast[i].date+"</td><td>"+w_icon(resp.data.forecast[i].type)+"</td><td>"+resp.data.forecast[i].high+"</td><td>"+str_fengli+"</td><td>"+resp.data.forecast[i].low+"</td><td>"+resp.data.forecast[i].fengxiang+"</td></td>";
+                $('#forecast table tbody').append(forword_day);
+            }
+        },error:function (e) {
+            console.log(e);
+        }
+    });
     // console.log(city);
     // $.ajax({
 	// 	url: 'http://wthrcdn.etouch.cn/weather_mini',
