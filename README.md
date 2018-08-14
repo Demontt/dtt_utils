@@ -1,16 +1,16 @@
 # DTT's weather forecast
 
-## 页面截图
+## ScreenShot image
 ![image](/img/example.png)
 
-## 使用bootstrap-select
+## use bootstrap-select
 * Screenshot
 * ![image](/img/bo-select-example.png)
 * Add choose cityname by selecting and inputing cityname with chinese name or english name. For example, if you want to choose nanjing['南京'], you can input 'nanjing' or '南京'. 
 * *Remember, all characters are lowercase.*
 * The current rules are as follows.
 
-## [Range cities]目前天气预报范围城市：
+## Range cities[目前天气预报范围城市] :
 ```
 -- Jiangsu
     --- 南京 || nanjing
