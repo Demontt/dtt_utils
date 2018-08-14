@@ -71,3 +71,6 @@ http://wthrcdn.etouch.cn/weather_mini
 ## Problems not currently resolved
 * https page request http page by ajax
 
+* solved problem
++ [Reference URL](https://github.com/BlueSky-07/PHP_AJAX)
++  Reference Code ajax.php
