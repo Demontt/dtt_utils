@@ -99,7 +99,7 @@ $("#select_city").change( function() {
         },error:function (e) {
             console.log(e);
         }
-    },);
+    });
     // console.log(city);
     // $.ajax({
 	// 	url: 'http://wthrcdn.etouch.cn/weather_mini',
