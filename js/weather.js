@@ -73,7 +73,7 @@ $("#select_city").change( function() {
         },
         dataType: 'json',
         success: function (resp) {
-            //console.log(resp);
+            console.log(resp);
             var date_data=resp.data.forecast[0].date;
             var data_len=date_data.substr(0,3);
             var data_len_day=date_data.substr(3,3);
@@ -99,7 +99,7 @@ $("#select_city").change( function() {
         },error:function (e) {
             console.log(e);
         }
-    });
+    },);
     // console.log(city);
     // $.ajax({
 	// 	url: 'http://wthrcdn.etouch.cn/weather_mini',
