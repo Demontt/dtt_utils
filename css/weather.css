@@ -1,0 +1,49 @@
+/* public */
+body{
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    background-image: url('dtt_pic/img01.jpg');
+}
+.lino{
+    margin: 0;
+    padding: 0;
+}
+#header {
+    height: 50px;
+    background: #f1f1f1;
+    line-height: 50px;
+}
+
+#main{
+    padding-top: 10px;
+    border-bottom: 2px solid #f1f1f1;
+}
+#main table th{
+    font-size: 18px;
+    text-align: center;
+    width: 15%;
+}
+#main table td{
+    font-size: 16px;
+    width: 35%;
+    text-indent: 1.5em;
+}
+
+#main{
+    overflow:hidden;
+}
+#forecast h2{
+    width: 100%;
+    height: 50px;
+    background: #f1f1f1;
+    line-height: 50px;
+    font-size: 23px;
+    text-indent: 1.5em;
+}
+#forecast table th{
+    text-align: center;
+    font-size: 18px;
+}
+#forecast table td{
+    text-align: center;
+    font-size: 16px;
+}
