@@ -1,7 +1,7 @@
 # DTT's weather forecast
 
 ## ScreenShot image
-![image](/img/example.png)
+![image](/img/example.jpg)
 
 ## use bootstrap-select
 * Screenshot
@@ -14,16 +14,10 @@
 ```
 -- Jiangsu
     --- 南京 || nanjing
-    --- 江宁 || jiangning
-    --- 浦口 || pukou
     --- 无锡 || wuxi
-    --- 江阴 || jiangyin
     --- 苏州 || suzhou
-    --- 常熟 || changshu
-    --- 张家港 || zhangjiagang
 -- Guangzhou
     --- 广州 || guangzhou
-    --- 番禺 || fanyu
     --- 汕头 || shantou
     --- 潮阳 || chaoyang
     --- 深圳 || shenzhen
@@ -66,12 +60,18 @@ icon[8]+icon[12] : '大到暴雨'
 
 ## ajax Request
 ```
-http://wthrcdn.etouch.cn/weather_mini
+http://saweather.market.alicloudapi.com/area-to-weather
 ```
+* This API interface needs to apply for itself.
+* Application URL:https://market.aliyun.com/products/56928004/cmapi014123.html?spm=5176.730005.productlist.d_cmapi014123.5a5d3524VFR60W#sku=yuncode812300000
 
-## Problems not currently resolved
-* https page request http page by ajax
+## ~~Problems not currently resolved~~
+* ~~https page request http page by ajax~~
 
-* solved problem
-+ [Reference URL](https://github.com/BlueSky-07/PHP_AJAX)
-+  Reference Code ajax.php
+* ~~solved problem~~
++ ~~[Reference URL](https://github.com/BlueSky-07/PHP_AJAX)~~
++  ~~Reference Code ajax.php~~
+
+## Problem resolced
+* This new interface provides two access methods ,'https' and 'http'.
+* Cross-domain problem solved.
